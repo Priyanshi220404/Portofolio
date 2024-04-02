@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♫ Music</title>
+    <!--Step1: To add external files from bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="music-container">
+    <div class="container">
+      <p id="head">♫Music</p>
+      <input type="text" class="searchbar button" placeholder="🔍 Search Artists, Songs, Albums">
+      <a href="./index.html" class="a">Home</a>
+      <!--dropdown menu-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+         aria-expanded="false">Moods&Genres</button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" onclick="location.href='#all songs'">All Songs</button></li>
+          <li><button class="dropdown-item" onclick="location.href='#english songs'">English Songs</button></li>
+          <li><button class="dropdown-item" onclick="location.href='#k-pop music'">K-pop Music</button></li>
+          <li><button class="dropdown-item" onclick="location.href='#hindi songs'">Hindi Songs</button></li>
+        </ul>
+      </div>
+      <button class="button loginbutton">Log In/Sign Up</button>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+         aria-expanded="false">Help</button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button">To Play - click ones on img</button></li>
+          <li><button class="dropdown-item" type="button">To Pause - click twice on img</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Courel-->
+    <div id="carouselExampleAutoplaying" class="carousel slide space" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/butter.jpg" class="d-block w-100" alt="bts">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/cruelsummer.jpg" class="d-block w-100" alt="english">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/god of music.jpg"  class="d-block w-100" alt="god of music">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/darling.jpg"  class="d-block w-100" alt="god of music">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/obessed.jpg"  class="d-block w-100" alt="god of music">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    <div class="music-vibe space">
+      <p class="style"id="all songs" >All Songs</p>
+      <img src="./images/butter.jpg" id="photo" alt="butter" ondblclick="stopMusic()" onclick="toggleMusic('../music/K-pop/spotifydown.com - butter.mp3')"/> 
+      <img src="./images/cruelsummer.jpg" id="photo" alt="cruel summer"ondblclick="stopMusic()" onclick="toggleMusic('../music/english/spotifydown.com - Cruel Summer.mp3')"/>
+      <img src="./images/darling.jpg" id="photo" alt="darling" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Darl+ing.mp3')"/>
+      <img src="./images/dynamite.jpg "id="photo" alt="dynamite" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Dynamite.mp3')"/>
+      <img src="./images/heeriye.jpg" id="photo" alt="Heeriye" ondblclick="stopMusic()" onclick="toggleMusic('./music/spotifydown.com%20-%20Heeriye%20%28feat.%20Arijit%20Singh%29.mp3')"/>  
+      <img src="./images/hot.jpg" id="photo" alt="Hot" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - HOT.mp3')"/>
+      <img src="./images/god of music.jpg" id="photo" alt="god of music" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - God of Music.mp3')"/>
+      <div class="text">
+        <div class="name">
+          <p id="song-name">Butter<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Cruel Summer<p>
+          <p>Taylor Swift</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Darling<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Dynamite<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">heeriye<p>
+          <p>Dulquer Salmaan,..</p>
+        </div>
+       <div class="name">
+          <p id="song-name">Hot<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">God Of Music<p>
+          <p>SEVENTEEN</p>
+        </div>
+      </div>
+      <img src="./images/left and right.jpg" id="photo" alt="left and right" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Left & Right.mp3')" />
+      <img src="./images/magicshop.jpg" id="photo" alt="magicshop" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Magic Shop.mp3')" />
+      <img src="./images/megaverse.jpg" id="photo" alt="megaverse" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - MEGAVERSE.mp3')"/>
+      <img src="./images/mikrokosmos.jpg" id="photo" alt="mikrokosmos" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Mikrokosmos.mp3')"/>
+      <img src="./images/obessed.jpg" id="photo" alt="obessed" ondblclick="stopMusic()" onclick="toggleMusic('./music/spotifydown.com - Obsessed.mp3')"/>
+      <img src="./images/omahi omahi.jpg" id="photo" alt="omahi" ondblclick="stopMusic()" onclick="toggleMusic('./music/spotifydown.com%20-%20O%20Maahi%20%28From%20_Dunki_%29.mp3')"/>
+      <img src="./images/paperring.jpg" id="photo" alt="paper ring" ondblclick="stopMusic()" onclick="toggleMusic('./music/english/spotifydown.com - Paper Rings.mp3')"/>
+      <div class="text">
+        <div class="name">
+          <p id="song-name">Left And Right<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Magic Shop<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Megaverse<p>
+          <p>STRAY KIDS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Mikrokosmos<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Obessed<p>
+          <p>Riar Saab,..</p>
+        </div>
+        <div class="name">
+          <p id="song-name">O Mahi<p>
+          <p>Pritam ,Arijit..</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Paper Ring<p>
+          <p>Taylor Swift</p>
+        </div>
+      </div>
+      <img src="./images/spring.jpg" id="photo" alt="spring day" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Spring Day.mp3')"/>
+      <img src="./images/super.jpg" id="photo" alt="super" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Super.mp3')"/>
+      <img src="./images/tinnitus.jpg" id="photo" alt="tinnitus" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com%20-%20Tinnitus%20%28Wanna%20be%20a%20rock%29.mp3')"/>
+      <img src="./images/world.jpg" id="photo" alt="world" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - _WORLD.mp3')"/>
+      <div class="text">
+        <div class="name">
+          <p id="song-name">Spring Day<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Super<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Tinnitus<p>
+          <p>TOMORROW X T</p>
+        </div>
+        <div class="name">
+          <p id="song-name">_World<p>
+          <p>SEVENTEEN</p>
+        </div>
+      </div>
+      <p class="style" id="k-pop music"> K-pop Music </p>
+      <img src="./images/butter.jpg" id="photo" alt="butter" ondblclick="stopMusic()" onclick="toggleMusic('../music/K-pop/spotifydown.com - butter.mp3')"/>
+      <img src="./images/darling.jpg" id="photo" alt="darling" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Darl+ing.mp3')"/>
+      <img src="./images/dynamite.jpg "id="photo" alt="dynamite" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Dynamite.mp3')"/>
+      <img src="./images/hot.jpg" id="photo" alt="Hot" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - HOT.mp3')"/>
+      <img src="./images/god of music.jpg" id="photo" alt="god of music" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - God of Music.mp3')" />
+      <img src="./images/left and right.jpg" id="photo" alt="left and right" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Left & Right.mp3')" />
+      <img src="./images/magicshop.jpg" id="photo" alt="magicshop" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Magic Shop.mp3')" />
+      <div class="text">
+        <div class="name">
+          <p id="song-name">Butter<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Darling<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Dynamite<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Hot<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">God Of Music<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Left And Right<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Magic Shop<p>
+          <p>BTS</p>
+        </div>
+      </div>
+      <img src="./images/megaverse.jpg" id="photo" alt="megaverse" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - MEGAVERSE.mp3')"/>
+      <img src="./images/mikrokosmos.jpg" id="photo" alt="mikrokosmos" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Mikrokosmos.mp3')"/>
+      <img src="./images/spring.jpg" id="photo" alt="spring day" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Spring Day.mp3')"/>
+      <img src="./images/super.jpg" id="photo" alt="super" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - Super.mp3')"/>
+      <!--20% are for space 28%openbracket and 29% closebracket-->
+      <img src="./images/tinnitus.jpg" id="photo" alt="tinnitus" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com%20-%20Tinnitus%20%28Wanna%20be%20a%20rock%29.mp3')"/>
+      <img src="./images/world.jpg" id="photo" alt="world" ondblclick="stopMusic()" onclick="toggleMusic('./music/k-pop/spotifydown.com - _WORLD.mp3')"/>
+      <div class="text">
+        <div class="name">
+          <p id="song-name">Megaverse<p>
+          p>STRAY KIDS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Mikrokosmos<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Spring Day<p>
+          <p>BTS</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Super<p>
+          <p>SEVENTEEN</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Tinnitus<p>
+          <p>TOMORROW X T</p>
+        </div>
+        <div class="name">
+          <p id="song-name">_World<p>
+          <p>SEVENTEEN</p>
+        </div>
+      </div>
+      <p class="style" id="english songs">English Songs</p>
+      <img src="./images/cruelsummer.jpg" id="photo" alt="cruel summer"ondblclick="stopMusic()" onclick="toggleMusic('./music/english/spotifydown.com - Cruel Summer.mp3')" />
+      <img src="./images/paperring.jpg" id="photo" alt="paper ring" ondblclick="stopMusic()" onclick="toggleMusic('./music/english/spotifydown.com - Paper Rings.mp3')"/>
+      <div class="text">
+        <div class="name">
+          <p id="song-name">Cruel Summer<p>
+          <p>Taylor Swift</p>
+        </div>
+        <div class="name">
+          <p id="song-name">Paper Ring<p>
+          <p>Taylor Swift</p>
+        </div>
+      </div>
+      <p class="style" id="hindi songs">Hindi Songs</p>
+      <img src="./images/heeriye.jpg" id="photo" alt="Heeriye" ondblclick="stopMusic()" onclick="toggleMusic('./music/spotifydown.com%20-%20Heeriye%20%28feat.%20Arijit%20Singh%29.mp3')"/>
+      <img src="./images/obessed.jpg" id="photo" alt="obessed" ondblclick="stopMusic()" onclick="toggleMusic('./music/spotifydown.com - Obsessed.mp3')"/>
+      <img src="./images/omahi omahi.jpg" id="photo" alt="omahi" ondblclick="stopMusic()" onclick="toggleMusic('./music/spotifydown.com%20-%20O%20Maahi%20%28From%20_Dunki_%29.mp3')"/>
+      <div class="text">
+        <div class="name">
+          <p id="song-name">heeriye<p>
+          <p>Dulquer Salmaan,..</p> 
+        </div>
+        <div class="name">
+          <p id="song-name">Obessed<p>
+          <p>Riar Saab,..</p>
+        </div>
+        <div class="name">
+          <p id="song-name">O Mahi<p>
+          <p>Pritam ,Arijit..</p>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <p id="footer">© 2024 MukeshRenu 💗</p>
+    </footer>
+  <script src="./index.js" charset="UTF-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

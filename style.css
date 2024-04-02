@@ -1,0 +1,64 @@
+.box{
+    border: 5px solid wheat;
+    background-color: #DCD6F7;
+    display: flex;
+    align-items: center;
+}
+
+div .inside{
+    margin-left: 50px;
+}
+
+img{
+    float: left;
+    height: 250px;
+}
+
+.name{
+    border-bottom: 2px solid violet;   
+}
+
+p{
+    
+    font-size: 2rem;
+}
+
+.input{
+    height: 40px;
+    width: 20%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    background-color: #424874;
+}
+
+@media (min-width: 1201px) {
+    .box{
+        height: 90vh;
+        margin:150px;
+    }
+
+    .text{
+        float: right; 
+        margin-left: 50px;
+    }
+}
+
+@media (min-width:480px) and (max-width:800px){
+    .box{
+        height: 110vh;
+        margin:50px;
+    }
+      
+    .text{
+        clear: both;
+        margin-left: 20px;
+    }   
+}
